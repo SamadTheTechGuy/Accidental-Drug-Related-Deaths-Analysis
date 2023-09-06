@@ -576,28 +576,7 @@ WHERE date_type IN ('Date of death', 'Date reported')
 GROUP BY 1
 ORDER BY 2;
 
---Brief Overview
---This dataset was made available on data.gov provided by the Office of the Chief Medical Examiner, State of Conneticut.
---It shows accidental death report associated with drug overdose in Connecticut from 2012 to 2021.
--- Data Owned by Pauline Zaldonis. It consists of more than 9,000 rows and 48 columns split into 2 tables.
---After data cleaning, the rows was reduced to 3,163 rows. #Health and Human Services
 
---Key Insights
---3,163 deaths were recorded over the years - from 2012 to 2021.
---More male victims(2,345) death report recorded were more than the females(816) - with a total of 1,529 records. 
---Year 2021 had highest death counts - with 357 records.
---White race death records had the highest and most counts compared to others - with more than 2,000 records.
---Connecticut State and Hartford City had the most death counts - with more 2,500 and 200 records.  
---The most common form of description of injury was substance abuse.
---The age brackets with the highest number of death counts was the middle age(1,901) - between 31 and 54 years old. while 
---the old age had the least(592) - above 54 years old.
---The most common place of injury was their place of residence.
---The most common causes of death amongst the age categories are: 
---For Adolescence and middle age- use of cocaine
---For Old age - hypertensive and atherosclerotic cardiovascular disease
---Almost 2,500 males died by accident, more than 800 were female victims, and only just 1 male died naturally.
---The maximum number of deaths was recorded in 2021 (Middle age) while the least number of deaths was in 2014 (Old age).
---It was recorded that fentanyl was detected most in the victims which resulted to 1,698 deaths.
 
 
 
