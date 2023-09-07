@@ -17,3 +17,14 @@ This dataset was made available on data.gov provided by the Office of the Chief 
 *  What are the total number of male and female victims that died by accident or naturally?
 *  What are the highest and lowest number of deaths per year for the age categories?
 *  What are the top 5 detected overdose drugs in the victims with their corresponding number of deaths?
+## Tool used
+*  Postgresql
+##  Processes
+*  Created two tables for the datasets in pgadmin
+*  Imported the data into the tables
+*  Data cleaning - checked for errors/removed duplicates, updated some columns to lowercase, corrected misspelt words and punctuation errors.
+*  Analysis
+## Key Insights
+*  **3,163 deaths** were recorded over the years - from **2012 to 2021.**
+![Screenshot (162)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/013d597c-703f-486b-b1be-109212591baa)
+
