@@ -343,7 +343,7 @@ WHERE residence_state IS NOT NULL
 GROUP BY 1
 ORDER BY 2 DESC;
 
---To view the most form of description of injury from drugdeaths table
+--To view the top 5 form of description of injury from drugdeaths table
 SELECT
 	DISTINCT description_of_injury,
 	COUNT(*) AS num_of_injuries
