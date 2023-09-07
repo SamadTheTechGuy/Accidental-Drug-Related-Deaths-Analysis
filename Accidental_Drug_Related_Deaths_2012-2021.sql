@@ -293,7 +293,7 @@ WHERE row_num IN (
 
 ALTER TABLE drugcause DROP COLUMN row_num;	
 
---To find the total number of deaths
+--To find the total number of deaths recorded over the years
 SELECT
 	COUNT(*) AS total_deaths
 FROM drugdeaths;
