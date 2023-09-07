@@ -10,4 +10,4 @@ This dataset was made available on data.gov provided by the Office of the Chief 
 *  Which year had the highest death counts from the report?
 *  Which race had the highest death records compared to others?
 *  Which state and city recorded the most death counts?
-*  
+*  What are the top 5 description of injury?
