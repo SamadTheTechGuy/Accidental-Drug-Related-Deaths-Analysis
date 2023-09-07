@@ -27,4 +27,12 @@ This dataset was made available on data.gov provided by the Office of the Chief 
 ## Key Insights
 *  **3,163 deaths** were recorded over the years - from **2012 to 2021.**
 ![Screenshot (162)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/013d597c-703f-486b-b1be-109212591baa)
+*  Male victims total deaths recorded, **2,345** were more than the females **816**.
+![Screenshot (164)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/3c0646cb-5bf0-4c48-849d-ff765d2d203f)
+*  **Year 2021** had highest death counts with **357 records.**
+![Screenshot (166)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/9c676b31-3c44-452d-9c3e-4006892cc6dd)
+*  **White race** death records had the highest death counts compared to others with more than **2,000 records.**
+![Screenshot (168)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/a533eb4b-b3f0-4868-a54f-628415122e9a)
+
+
 
