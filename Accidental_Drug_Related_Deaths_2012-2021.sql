@@ -547,7 +547,8 @@ FROM (SELECT
 FROM drugcause) x
 WHERE x.indicator = 'Y'
 GROUP BY 1,2
-ORDER BY 3 DESC;
+ORDER BY 3 DESC
+LIMIT 5;
 
 --To create view to store the age categories with the most deaths data	
 CREATE VIEW age_categories_death AS
