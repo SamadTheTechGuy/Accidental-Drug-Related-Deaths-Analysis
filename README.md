@@ -33,6 +33,9 @@ This dataset was made available on data.gov provided by the Office of the Chief 
 ![Screenshot (166)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/9c676b31-3c44-452d-9c3e-4006892cc6dd)
 *  **White race** death records had the highest death counts compared to others with more than **2,000 records.**
 ![Screenshot (168)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/a533eb4b-b3f0-4868-a54f-628415122e9a)
+*  Connecticut State and Hartford City had the most death counts - with more 2,500 and 200 records.
+![Screenshot (170)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/c33ab766-22cd-459e-a3b9-c266a4958545)
+
 
 
 
