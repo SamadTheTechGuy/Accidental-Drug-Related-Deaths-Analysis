@@ -153,6 +153,8 @@ SET description_of_injury =
 		WHEN description_of_injury ILIKE ANY(ARRAY['prescription medication abuse%','prescription medicine abuse%'
 												  ,'prescription medicine misuse%','abused prescription medications%'])
 			THEN 'prescription drug overuse'
+		WHEN description_of_injury = 'substance use' THEN 'drug use'
+		WHEN description_of_injury = 'substance abuse' THEN 'drug abuse'
 		ELSE description_of_injury
 		END
 		
