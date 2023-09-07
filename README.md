@@ -6,3 +6,8 @@ The accidental drug related deaths data shows accidental death report associated
 This dataset was made available on data.gov provided by the Office of the Chief Medical Examiner, State of Conneticut. Owned by Pauline Zaldonis. It consists of more than 9,000 rows and 48 columns split into 2 tables. After data cleaning, the rows was reduced to 3,163 rows.
 ## Problem Questions
 *  What is the total number of deaths recorded over the years?
+*  What are the total number of male and female victims from the report?
+*  Which year had the highest death counts from the report?
+*  Which race had the highest death records compared to others?
+*  Which state and city recorded the most death counts?
+*  
