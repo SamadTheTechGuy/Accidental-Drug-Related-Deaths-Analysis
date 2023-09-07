@@ -343,14 +343,15 @@ WHERE residence_state IS NOT NULL
 GROUP BY 1
 ORDER BY 2 DESC;
 
---To view the top 5 form of description of injury from drugdeaths table
+--To view the top 5 forms of description of injury from drugdeaths table
 SELECT
 	DISTINCT description_of_injury,
 	COUNT(*) AS num_of_injuries
 FROM DrugDeaths
 WHERE description_of_injury is not null
 GROUP BY 1
-ORDER BY 2 DESC;
+ORDER BY 2 DESC
+LIMIT 5;
 
 --To view the age categories of the victims by their description of injury
 SELECT
