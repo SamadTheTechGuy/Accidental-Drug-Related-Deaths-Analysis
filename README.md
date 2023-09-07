@@ -11,3 +11,9 @@ This dataset was made available on data.gov provided by the Office of the Chief 
 *  Which race had the highest death records compared to others?
 *  Which state and city recorded the most death counts?
 *  What are the top 5 description of injury?
+*  Which age categories had the highest and least death counts?
+*  What are the top 3 places most injuries occurred?
+*  What are the top 3 causes of death in each age category having the maximum number of death.
+*  What are the total number of male and female victims that died by accident or naturally?
+*  What are the highest and lowest number of deaths per year for the age categories?
+*  What are the top 5 detected overdose drugs in the victims with their corresponding number of deaths?
