@@ -38,7 +38,7 @@ This dataset was made available on data.gov provided by the Office of the Chief 
 ![Screenshot (172)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/d4d4c0e6-3531-4877-bc32-10988775bae7)
 *  The top 5 **description of injury** were **drug abuse**,**drug use**,**ingestion**,**injection**,**inhalation**.
 ![Screenshot (175)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/1d70b08f-216f-425a-9928-3035d04fe38b)
-*  The age brackets with the highest number of death counts was the **middle age(1,901)** - **between 31 and 54 years old.** while 
+*  The age brackets with the highest number of death counts was the **middle age(1,901)** - **between 31 and 54 years old** while 
 the **old age had the least(592)** - **above 54 years old.**
 ![Screenshot (177)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/ca184c3f-5bb5-4863-a875-0b061983561a)
 *  The top 3 places were their **places of residence**, **other places**, and **hotel or motel.**  
