@@ -3,7 +3,7 @@ This is an exploratory analysis of accidental drug related deaths data.
 # Brief Introduction
 The accidental drug related deaths data shows accidental death report associated with drug overdose from different genders, races, the causes and manners of death, etc. from 2012 to 2021 in United States. So, recently, the Office of the Chief Medical Examiner, State of Connecticut hired me as a data analyst to help unravel and find insightful information about the data. 
 ## Brief Overview of the dataset
-This dataset was made available on data.gov provided by the Office of the Chief Medical Examiner, State of Conneticut. Owned by Pauline Zaldonis. It consists of more than 9,000 rows and 48 columns split into 2 tables. After data cleaning, the rows was reduced to 3,163 rows.
+This dataset was made available on data.gov provided by the Office of the Chief Medical Examiner, State of Conneticut. Owned by Pauline Zaldonis. It consists of more than 9,000 rows and 48 columns split into 2 tables. After data cleaning, the rows were reduced to 3,163 rows.
 ## Problem Questions
 *  What is the total number of deaths recorded over the years?
 *  What are the total number of male and female victims from the report?
@@ -27,7 +27,7 @@ This dataset was made available on data.gov provided by the Office of the Chief 
 ## Key Insights
 *  **3,163 deaths** were recorded over the years - from **2012 to 2021.**
 ![Screenshot (162)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/013d597c-703f-486b-b1be-109212591baa)
-*  Male victims total deaths recorded, **2,345** were more than the females **816**.
+*  **Male victims** total deaths - **2,345** recorded were more than the **females** - **816**.
 ![Screenshot (164)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/3c0646cb-5bf0-4c48-849d-ff765d2d203f)
 *  **Year 2021** had highest death counts with **357 records.**
 ![Screenshot (166)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/9c676b31-3c44-452d-9c3e-4006892cc6dd)
