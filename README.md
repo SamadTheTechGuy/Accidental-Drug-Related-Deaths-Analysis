@@ -49,7 +49,7 @@ For **Old age** - **hypertensive and atherosclerotic cardiovascular disease**
 ![Screenshot (181)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/f2bdc880-eb9a-49e9-ad9a-f6a7a49df5c9)
 *  **Almost 2,500 males** died by **accident**, **more than 800** were **female victims**, and only just **1 male** died **naturally.**
 ![Screenshot (183)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/72239f6a-717d-46c0-8c45-d753a41597db)
-*  The **maximum number of deaths** was recorded in **2021 - 221 (Middle age)** while the **least number of deaths** was in **2014 - 29 (Old age).**
+*  The **maximum number of deaths - 221 (Middle age)** were recorded in **2021** while the **least number of deaths - 29 (Old age)** were recorded in **2014.**
 ![Screenshot (187)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/e4cc10aa-7e33-4819-ab24-ea60e88e5698)
 *  It was recorded that **fentanyl** was **detected most** in the victims which resulted to **1,698 deaths.**
 ![Screenshot (189)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/654cb957-d0ea-47d9-b8a4-5aa7908de332)
