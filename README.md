@@ -36,12 +36,12 @@ This dataset was made available on data.gov provided by the Office of the Chief 
 *  **Connecticut State** and **Hartford City** had the most death counts - with more **2,500** and **200 records.**
 ![Screenshot (170)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/c33ab766-22cd-459e-a3b9-c266a4958545)
 ![Screenshot (172)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/d4d4c0e6-3531-4877-bc32-10988775bae7)
-*  The top 5 **description of injury** were **drug abuse**,**drug use**,**ingestion**,**injection**,**inhalation**.
+*  The most common form of **description of injury** was **drug abuse.**
 ![Screenshot (175)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/1d70b08f-216f-425a-9928-3035d04fe38b)
 *  The age brackets with the highest number of death counts was the **middle age(1,901)** - **between 31 and 54 years old** while 
 the **old age had the least(592)** - **above 54 years old.**
 ![Screenshot (177)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/ca184c3f-5bb5-4863-a875-0b061983561a)
-*  The top 3 places were their **places of residence**, **other places**, and **hotel or motel.**  
+*  The most common **place of injury** was their **place of residence.**  
 ![Screenshot (179)](https://github.com/SamadTheTechGuy/Accidental-Drug-Related-Deaths-Analysis/assets/97789215/74ef2ec7-cab5-450d-8489-934f4adb9c1e)
 *  The most common causes of death amongst the age categories were: 
 For **Adolescence and middle ages** - **use of cocaine**
