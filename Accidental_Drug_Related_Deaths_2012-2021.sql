@@ -1,5 +1,6 @@
 --To create table1 for the dataset
-DROP TABLE IF EXISTS DrugCause
+DROP TABLE IF EXISTS DrugCause;
+
 CREATE TABLE DrugCause (
 	Date DATE,
 	Date_Type TEXT,
@@ -37,7 +38,8 @@ CREATE TABLE DrugCause (
 );
 
 --To create table2 for the dataset
-DROP TABLE IF EXISTS DrugDeaths
+DROP TABLE IF EXISTS DrugDeaths;
+
 CREATE TABLE DrugDeaths (
 	Date DATE,
 	Date_type TEXT,
@@ -111,12 +113,10 @@ SET description_of_injury =
 												  ,'excessive ingestion of medication%','excessive prescribed of medication%'
 												  ,'abuse of medication%','abused medication%']) 
 			THEN 'abuse of medications'
-		WHEN description_of_injury ILIKE ANY(ARRAY['ingestion of drugs%','ingested medications'
-												  ,'ingested medicines%','ingestion of medications'])
+		WHEN description_of_injury ILIKE ANY(ARRAY['ingestion of drugs%','ingested medications','ingested medicines%','ingestion of medications'])									  
 			THEN 'ingested drugs'
 		WHEN description_of_injury = 'substance sue'  THEN 'substance use'
-		WHEN description_of_injury ILIKE ANY(ARRAY['inhalation/ingestion%','inhalation; ingestion%']) 
-			THEN 'inhalation and ingestion'
+		WHEN description_of_injury ILIKE ANY(ARRAY['inhalation/ingestion%','inhalation; ingestion%']) THEN 'inhalation and ingestion'
 		WHEN description_of_injury = 'druguse' THEN 'drug use'
 		WHEN description_of_injury = 'ingested narcotic medications and alcohol' THEN 'ingested narcotic medications with alcohol'
 		WHEN description_of_injury ILIKE ANY(ARRAY['took ethanol and prescription medication%','took ethanol and prescription medications%'])
@@ -127,16 +127,14 @@ SET description_of_injury =
 			THEN 'used drugs and alcohol'
 		WHEN description_of_injury ILIKE ANY(ARRAY['usage of multiple drugs%','took multiple medications%','multiple drug use%'])
 			THEN 'used multiple medications'
-		WHEN description_of_injury ILIKE ANY(ARRAY['medication alcohol abuse%','alcohol and medication/substance abuse%'
-												  ,'alcohol and substance abuse%'])
+		WHEN description_of_injury ILIKE ANY(ARRAY['medication alcohol abuse%','alcohol and medication/substance abuse%','alcohol and substance abuse%'])									  
 			THEN 'medication and alcohol abuse'
 		WHEN description_of_injury = 'used drugs' THEN 'took medications'
 		WHEN description_of_injury = 'took drugs' THEN 'took medications'
 		WHEN description_of_injury = 'took medication' THEN 'took medications'
 		WHEN description_of_injury ILIKE ANY(ARRAY['ingested medication%','consumed medications%']) THEN 'took medications'
 		WHEN description_of_injury ILIKE ANY(ARRAY['fentanyl use%','consumed fentanyl%']) THEN 'took fentanyl'
-		WHEN description_of_injury ILIKE ANY(ARRAY['used fentanyl and ethanol%'
-												   ,'took ethanol and fentanyl%']) 
+		WHEN description_of_injury ILIKE ANY(ARRAY['used fentanyl and ethanol%','took ethanol and fentanyl%'])									    
 			THEN 'took fentanyl and ethanol'
 		WHEN description_of_injury ILIKE ANY(ARRAY['took ethanol and prescribed medications%'
 												   ,'consumed ethanol and prescribed medications%'
@@ -150,13 +148,13 @@ SET description_of_injury =
 		WHEN description_of_injury ILIKE ANY(ARRAY['took prescription drugs%','took prescription-type%'])								  
 			THEN 'took prescription medications'
 		WHEN description_of_injury = 'took prescription medication' THEN 'took prescription medications'
-		WHEN description_of_injury ILIKE ANY(ARRAY['prescription medication abuse%','prescription medicine abuse%'
-												  ,'prescription medicine misuse%','abused prescription medications%'])
+		WHEN description_of_injury ILIKE ANY(ARRAY['prescription medication abuse%','prescription medicine abuse%','prescription medicine misuse%','abused prescription medications%'])									  
 			THEN 'prescription drug overuse'
 		WHEN description_of_injury = 'substance use' THEN 'drug use'
 		WHEN description_of_injury = 'substance abuse' THEN 'drug abuse'
+		WHEN description_of_injury IN ('substance use', 'substance abuse') THEN 'drug use'
 		ELSE description_of_injury
-		END
+	END
 		
 UPDATE drugdeaths
 SET race =
