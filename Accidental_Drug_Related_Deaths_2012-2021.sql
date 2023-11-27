@@ -152,31 +152,26 @@ SET description_of_injury =
 			THEN 'prescription drug overuse'
 		WHEN description_of_injury = 'substance use' THEN 'drug use'
 		WHEN description_of_injury = 'substance abuse' THEN 'drug abuse'
-		WHEN description_of_injury IN ('substance use', 'substance abuse') THEN 'drug use'
 		ELSE description_of_injury
-	END
+	END;
 		
 UPDATE drugdeaths
 SET race =
 	CASE
 		WHEN race = 'Black' THEN 'Black or African American'
 		ELSE race
-		END
+	END;
 
 UPDATE drugcause
 SET location_if_other = 
 	CASE
-		WHEN location_if_other IN ('friend''s apartment','friend''s apt.','friend''s home'
-								   ,'friend''s house','friend home')
+		WHEN location_if_other IN ('friend''s apartment','friend''s apt.','friend''s home','friend''s house','friend home')						   
 			THEN 'friend''s residence'
-		WHEN location_if_other IN ('friends'' home','friends''s residence','friends apartment'
-								   ,'friends home','friends house','friends resident')
+		WHEN location_if_other IN ('friends'' home','friends''s residence','friends apartment','friends home','friends house','friends resident')					   
 			THEN 'friends residence'
-		WHEN location_if_other IN ('boyfriend''s home','boyfriend''s house')
-			THEN 'boyfriend''s residence'
+		WHEN location_if_other IN ('boyfriend''s home','boyfriend''s house') THEN 'boyfriend''s residence'
 		WHEN location_if_other = 'boyfriends house' THEN 'boyfriends residence'
-		WHEN location_if_other IN ('girlfriend''s apt','girlfriend''s apt.','girlfriend''s home'
-								   ,'girlfriend''s house','girlfriend residence')
+		WHEN location_if_other IN ('girlfriend''s apt','girlfriend''s apt.','girlfriend''s home','girlfriend''s house','girlfriend residence')					   
 			THEN 'girlfriend''s residence'
 		WHEN location_if_other IN ('hotel or motel', 'motel/hotel') THEN 'hotel/motel'
 		WHEN location_if_other = 'in vehicle in parking lot' THEN 'vehicle in parking lot'
@@ -204,51 +199,50 @@ SET location_if_other =
 		WHEN location_if_other = 'neighbor''s home' THEN 'neighbor''s residence'
 		WHEN location_if_other = 'other''s residents' THEN 'other''s residence'
 		ELSE location_if_other
-		END
+	END;
 											   
 UPDATE drugcause
 SET cause_of_death = 
 	CASE
 		--WHEN cause_of_death = 'acute fentanyl intoxication.' THEN 'acute fentanyl intoxication'
 		WHEN cause_of_death IN ('acute intoxication due to the combined effects of cocaine and fentanyl'
-								, 'acute cocaine and fentanyl intoxication'
-							    , 'acute intoxication due to the combined effects of fentanyl and cocaine'
-							    , 'acute intoxication by the combined effects of fentanyl and cocaine'
-							    , 'acute intoxication by the combined effects of cocaine and fentanyl'
-							    , 'acute intoxication from the combined effects of cocaine and fentanyl')
+					, 'acute cocaine and fentanyl intoxication'
+					, 'acute intoxication due to the combined effects of fentanyl and cocaine'
+					, 'acute intoxication by the combined effects of fentanyl and cocaine'
+					, 'acute intoxication by the combined effects of cocaine and fentanyl'
+					, 'acute intoxication from the combined effects of cocaine and fentanyl')
 			THEN 'acute fentanyl and cocaine intoxication' 
 		WHEN cause_of_death IN ('acute intoxication due to the combined effects of fentanyl and heroin'
-							    , 'acute intoxication by the combined effects of fentanyl and heroin'
-							    , 'acute intoxication due to the combined effects of heroin and fentanyl'
-							    , 'acute intoxication from the combined effects of fentanyl and heroin')
+					 , 'acute intoxication by the combined effects of fentanyl and heroin'
+					 , 'acute intoxication due to the combined effects of heroin and fentanyl'
+					 , 'acute intoxication from the combined effects of fentanyl and heroin')
 			THEN 'acute fentanyl and heroin intoxication'
 		WHEN cause_of_death IN ('acute intoxication due to the combined effects of fentanyl and alcohol'
-							    , 'acute intoxication due to the combined effects of fentanyl and ethanol'
-							    , 'acute intoxication due to the combined effects of ethanol and fentanyl'
-							    , 'acute intoxication by the combined effects of fentanyl and alcohol'
-								, 'acute intoxication by the combined effects of ethanol and fentanyl'
-							    , 'acute fentanyl and ethanol intoxication'
-							    , 'acute intoxication from the combined effects of fentanyl and alcohol')
+					, 'acute intoxication due to the combined effects of fentanyl and ethanol'
+					, 'acute intoxication due to the combined effects of ethanol and fentanyl'
+					, 'acute intoxication by the combined effects of fentanyl and alcohol'
+					, 'acute intoxication by the combined effects of ethanol and fentanyl'
+					, 'acute fentanyl and ethanol intoxication'
+					, 'acute intoxication from the combined effects of fentanyl and alcohol')
 			THEN 'acute ethanol and fentanyl intoxication'
 		WHEN cause_of_death = 'acute intoxication due to the combined effects of cocaine and heroin'
 			THEN 'acute heroin and cocaine intoxication'
-		WHEN cause_of_death IN ('intoxication due to the combined effects of cocaine and heroin'
-								, 'heroin and cocaine intoxication')
+		WHEN cause_of_death IN ('intoxication due to the combined effects of cocaine and heroin', 'heroin and cocaine intoxication')						
 			THEN 'cocaine and heroin intoxication'
 		WHEN cause_of_death IN ('acute intoxication due to the combined effects of fentanyl, cocaine and alcohol'
-							    , 'acute intoxication due to the combined effects of fentanyl, cocaine, and ethanol'
-							    , 'acute intoxication combined effects of ethanol, cocaine, and fentanyl')
+					, 'acute intoxication due to the combined effects of fentanyl, cocaine, and ethanol'
+					, 'acute intoxication combined effects of ethanol, cocaine, and fentanyl')
 			THEN 'acute intoxication by the combined effects of ethanol, cocaine, and fentanyl'
 		WHEN cause_of_death IN ('acute intoxication due to the combined effects of cocaine, fentanyl, and heroin'
-							    , 'acute intoxication due to the combined effects of fentanyl, heroin and cocaine'
-							    , 'acute intoxication from the combined effects of cocaine, fentanyl, and heroin')
+					, 'acute intoxication due to the combined effects of fentanyl, heroin and cocaine'
+					, 'acute intoxication from the combined effects of cocaine, fentanyl, and heroin')
 			THEN 'acute intoxication due to the combined effects of fentanyl, heroin, and cocaine'
 		WHEN cause_of_death = 'acute intoxication due to the combined effects of ethanol, fentanyl, and heroin'
 			THEN 'acute intoxication due to the combined effects of fentanyl, heroin, and ethanol'
 		WHEN cause_of_death = 'acute intoxication from the combined effects of fentanyl and alprazolam'
 			THEN 'acute intoxication due to the combined effects of fentanyl and alprazolam'
 		WHEN cause_of_death IN ('acute intoxication due to the combined effects of heroin and ethanol'
-							    , 'acute intoxication due to the combined effects of heroin and alcohol')
+					, 'acute intoxication due to the combined effects of heroin and alcohol')
 			THEN 'acute heroin and ethanol intoxication'
 		WHEN cause_of_death = 'acute intoxication by the combined effects of fentanyl and xylazine'
 			THEN 'acute intoxication due to the combined effects of fentanyl and xylazine'
@@ -257,7 +251,7 @@ SET cause_of_death =
 		WHEN cause_of_death = 'intoxication due to the combined effects of ethanol, cocaine, and heroin'
 			THEN 'acute intoxication due to the combined effects of ethanol, cocaine, and heroin'
 		Else cause_of_death
-		END
+	END;
 		
 UPDATE drugcause
 SET other_significant_conditions = 
@@ -267,7 +261,7 @@ SET other_significant_conditions =
 		WHEN other_significant_conditions = 'recent cocaine use.'
 			THEN 'recent cocaine use'
 		ELSE other_significant_conditions
-		END		
+	END;		
 
 --To check for and remove duplicates
 --Create temporary unique id columns for the two tables
@@ -275,10 +269,10 @@ ALTER TABLE drugdeaths ADD COLUMN row_num INT GENERATED ALWAYS AS IDENTITY;
 
 DELETE FROM drugdeaths
 WHERE row_num IN (
-				SELECT MAX(row_num)
-				FROM drugdeaths
-				GROUP BY date, date_type
-				HAVING COUNT(*) > 1);
+		  SELECT MAX(row_num)
+		  FROM drugdeaths
+		  GROUP BY date, date_type
+		  HAVING COUNT(*) > 1);
 
 ALTER TABLE drugdeaths DROP COLUMN row_num;
 
@@ -286,22 +280,22 @@ ALTER TABLE drugcause ADD COLUMN row_num INT GENERATED ALWAYS AS IDENTITY;
 
 DELETE FROM drugcause
 WHERE row_num IN (
-				SELECT MAX(row_num)
-				FROM drugcause
-				GROUP BY date, date_type
-				HAVING COUNT(*) > 1);
+		  SELECT MAX(row_num)
+		  FROM drugcause
+		  GROUP BY date, date_type
+		  HAVING COUNT(*) > 1);
 
 ALTER TABLE drugcause DROP COLUMN row_num;	
 
 --To find the total number of deaths recorded over the years
 SELECT
-	COUNT(*) AS total_deaths
+      COUNT(*) AS total_deaths
 FROM drugdeaths;
 
 --To find the number of male and female victims from the DrugDeaths table
 SELECT
-	DISTINCT sex,
-	COUNT(*) AS num_victims
+      DISTINCT sex,
+      COUNT(*) AS num_victims
 FROM DrugDeaths
 WHERE sex is not null
 GROUP BY 1
@@ -309,8 +303,8 @@ ORDER BY 2 DESC;
 
 --To find the year most deaths were recorded or reported from the DrugDeaths table
 SELECT
-	extract(year from date) AS year,
-	COUNT(*) AS DeathCount
+      extract(year from date) AS year,
+      COUNT(*) AS DeathCount
 FROM DrugDeaths
 WHERE date_type IN ('Date of death', 'Date reported')
 GROUP BY 1
