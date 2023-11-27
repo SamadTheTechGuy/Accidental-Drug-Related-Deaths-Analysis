@@ -294,7 +294,7 @@ FROM drugdeaths;
 
 --To find the number of male and female victims from the DrugDeaths table
 SELECT
-      DISTINCT sex,
+      sex,
       COUNT(*) AS num_victims
 FROM DrugDeaths
 WHERE sex is not null
@@ -312,7 +312,7 @@ ORDER BY 2 DESC;
 
 --To find the race with the most drug related death from the DrugDeaths table
 SELECT
-	DISTINCT race,
+	race,
 	COUNT(*) AS num_drug_related_deaths
 FROM DrugDeaths
 WHERE race is not null
@@ -321,7 +321,7 @@ ORDER BY 2 DESC;
 
 --To view the residence city with the most death counts from the drugdeaths table
 SELECT
-	DISTINCT residence_city,
+	residence_city,
 	COUNT(*) AS num_deaths
 FROM DrugDeaths
 WHERE residence_city is not null
@@ -330,7 +330,7 @@ ORDER BY 2 DESC;
 
 --To view the residence state with the most death from the drugdeaths table
 SELECT
-	DISTINCT residence_state,
+	residence_state,
 	COUNT(*) AS num_deaths
 FROM DrugDeaths
 WHERE residence_state IS NOT NULL
@@ -339,8 +339,8 @@ ORDER BY 2 DESC;
 
 --To view the top 5 forms of description of injury from drugdeaths table
 SELECT
-	DISTINCT description_of_injury,
-	COUNT(*) AS num_of_injuries
+      description_of_injury,
+      COUNT(*) AS num_of_injuries
 FROM DrugDeaths
 WHERE description_of_injury is not null
 GROUP BY 1
@@ -349,38 +349,34 @@ LIMIT 5;
 
 --To view the age categories of the victims by their description of injury
 SELECT
-	DISTINCT description_of_injury,
-	age,
-		CASE
-			WHEN age < 31 THEN 'Adolescent'
-			WHEN age >= 31 AND age <= 54 THEN 'Middle age'
-			WHEN age >54 THEN 'Old'
-		END AS Age_Categories
+      DISTINCT description_of_injury,
+      age,
+          CASE
+	      WHEN age < 31 THEN 'Adolescent'
+	      WHEN age >= 31 AND age <= 54 THEN 'Middle age'
+	      WHEN age >54 THEN 'Old'
+	  END AS Age_Categories
 FROM DrugDeaths
 WHERE description_of_injury IS NOT NULL AND age IS NOT NULL
 ORDER BY 2 DESC;
 
 --To view the age categories with the most deaths
 SELECT
-	DISTINCT age_categories,
-	COUNT(*) OVER(PARTITION BY age_categories) AS num_of_deaths
-FROM
-	(SELECT
-		age,
-			CASE
-				WHEN age < 31 THEN 'Adolescent'
-				WHEN age >= 31 AND age <= 54 THEN 'Middle age'
-				WHEN age >54 THEN 'Old'
-			END AS Age_Categories
-	FROM DrugDeaths
-	WHERE age IS NOT NULL
-	ORDER BY 2 DESC) X
-ORDER BY 2 DESC;
+    CASE
+        WHEN age < 31 THEN 'Adolescent'
+        WHEN age BETWEEN 31 AND 54 THEN 'Middle age'
+        WHEN age > 54 THEN 'Old'
+    END AS age_categories,
+    COUNT(*) AS num_of_deaths
+FROM DrugDeaths
+WHERE age IS NOT NULL
+GROUP BY age_categories
+ORDER BY num_of_deaths DESC;
 
 --To find the top 3 places where most injury occurred
 SELECT 
-	DISTINCT injury_place,
-	COUNT(*) AS Count_Injury_Place
+      injury_place,
+      COUNT(*) AS Count_Injury_Place
 FROM drugdeaths
 GROUP BY 1
 ORDER BY 2 DESC
