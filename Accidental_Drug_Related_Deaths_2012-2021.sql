@@ -384,32 +384,32 @@ LIMIT 3;
 
 --To find the top 3 causes of death in each age category having the max num_death
 WITH t1 AS (	
-SELECT
-	DISTINCT dc.cause_of_death,
-		CASE
-			WHEN age < 31 THEN 'Adolescent'
-			WHEN age >= 31 AND age <= 54 THEN 'Middle age'
-			WHEN age >54 THEN 'Old'
-		END AS Age_Categories,
-	COUNT(*) AS cod_count
-FROM drugdeaths dd
-INNER JOIN drugcause dc
-	ON dd.date = dc.date
-WHERE dd.age IS NOT NULL
-	AND dc.cause_of_death IS NOT NULL
-GROUP BY 1,2
-ORDER BY 3 DESC
+	SELECT
+	      dc.cause_of_death,
+	      CASE
+		   WHEN age < 31 THEN 'Adolescent'
+		   WHEN age >= 31 AND age <= 54 THEN 'Middle age'
+		   WHEN age >54 THEN 'Old'
+	      END AS Age_Categories,
+	      COUNT(*) AS cod_count
+       FROM drugdeaths dd
+       INNER JOIN drugcause dc
+	   ON dd.date = dc.date
+       WHERE dd.age IS NOT NULL
+	  AND dc.cause_of_death IS NOT NULL
+       GROUP BY 1,2
+       ORDER BY 3 DESC
 ),
 t2 AS (
 	SELECT 
-		*,
-		RANK() OVER(PARTITION BY age_categories ORDER BY cod_count DESC) AS rnk
+	     *,
+	     RANK() OVER(PARTITION BY age_categories ORDER BY cod_count DESC) AS rnk
 	FROM t1
 )
 SELECT 
-	*
+     *
 FROM t2 
-WHERE t2.rnk < 4;
+WHERE rnk < 4;
 		
 --To find the total number of male and female victims that died by accident or naturally
 SELECT 
@@ -548,11 +548,11 @@ SELECT
 FROM
 	(SELECT
 		age,
-			CASE
-				WHEN age < 31 THEN 'Adolescent'
-				WHEN age >= 31 AND age <= 54 THEN 'Middle age'
-				WHEN age >54 THEN 'Old'
-			END AS Age_Categories
+		   CASE
+			WHEN age < 31 THEN 'Adolescent'
+			WHEN age >= 31 AND age <= 54 THEN 'Middle age'
+			WHEN age >54 THEN 'Old'
+		   END AS Age_Categories
 	FROM DrugDeaths
 	WHERE age IS NOT NULL
 	ORDER BY 2 DESC) X
